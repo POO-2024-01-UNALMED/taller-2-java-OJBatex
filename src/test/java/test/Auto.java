@@ -10,7 +10,19 @@ public class Auto {
 	public static int cantidadCreados;
 	
 	public int cantidadAsientos(Asiento[] asientos) {
-		return asientos.length;
+		
+		int cantAsientos = 0;
+		
+		for (int i = 0; i > asientos.length; i++) {
+			
+			if (asientos[i] != null) {
+				
+				cantAsientos++;
+			}
+		}
+		
+		return cantAsientos;
+		
 	}
 		
 	public String verificarIntegridad(Asiento asiento, Motor motor, Auto auto) {
@@ -24,9 +36,5 @@ public class Auto {
 	}
 	
 
-	public static void main(String[] args) {
-		
-
-	}
 
 }
