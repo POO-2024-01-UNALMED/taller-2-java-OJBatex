@@ -1,19 +1,19 @@
 package test;
 
 public class Auto {
-	String modelo;
-	int precio;
-	Asiento[] asientos;
-	String marca;
-	Motor motor;
-	int registro;
-	static int cantidadCreados;
+	public String modelo;
+	public int precio;
+	public Asiento[] asientos;
+	public String marca;
+	public Motor motor;
+	public int registro;
+	public static int cantidadCreados;
 	
-	int cantidadAsientos(Asiento[] asientos) {
+	public int cantidadAsientos(Asiento[] asientos) {
 		return asientos.length;
 	}
 		
-	String verificarIntegridad(Asiento asiento, Motor motor, Auto auto) {
+	public String verificarIntegridad(Asiento asiento, Motor motor, Auto auto) {
 		
 		if (asiento.registro == motor.registro && asiento.registro == auto.registro && motor.registro == auto.registro) {
 			return "Auto original";
