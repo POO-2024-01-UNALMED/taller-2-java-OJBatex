@@ -10,11 +10,7 @@ public class Asiento {
 				
 		if (color == "rojo" || color == "verde" || color == "amarillo" || color == "negro" || color == "blanco") {
 			this.color = color;
-		}else {
-			System.out.println("Entrada inválida");
-	
 		}
-		
 				
 		
 	}
