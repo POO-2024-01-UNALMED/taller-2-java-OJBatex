@@ -13,8 +13,6 @@ public class Motor {
 	public void asignarTipo(String tipo) {
 		if (tipo == "electrico" || tipo == "gasolina") {
 			this.tipo = tipo;
-		}else {
-			System.out.println("Entrada invalida.");
 		}
 	}
 
