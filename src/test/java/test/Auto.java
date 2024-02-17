@@ -9,13 +9,13 @@ public class Auto {
 	public int registro;
 	public static int cantidadCreados;
 	
-	public int cantidadAsientos(Asiento[] asientos) {
+	public int cantidadAsientos() {
 		
 		int cantAsientos = 0;
 		
-		for (int i = 0; i > asientos.length; i++) {
+		for (int i = 0; i > this.asientos.length; i++) {
 			
-			if (asientos[i] != null) {
+			if (this.asientos[i] != null) {
 				
 				cantAsientos++;
 			}
