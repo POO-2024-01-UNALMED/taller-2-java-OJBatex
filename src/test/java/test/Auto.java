@@ -63,9 +63,7 @@ public class Auto {
 			}	
 		}
 		
-		System.out.println(regAsientos.length);
-		System.out.println(regAsientos[0]);
-		System.out.println(regAsientos[1]);
+	
 		return a;
 	}
 
