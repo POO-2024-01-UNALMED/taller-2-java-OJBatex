@@ -27,24 +27,45 @@ public class Auto {
 	
 	String verificarIntegridad() {
 		
-		boolean check = true;
+		int[] regAsientos = new int[cantidadAsientos()];
+		int numRegAsientos = 0;
+		boolean check = false;
 		String a = "Las piezas no son originales";
+		int posAsientos = -1;
 		
-		for (int i = 1; i < cantidadAsientos(); i++) {
+		for (int i = 0; i < this.asientos.length; i++) {
 			
-				if(this.asientos[i-1].registro != this.asientos[i].registro) {
-				check = false;
-				break;		
-			}	
+				if (this.asientos[i] != null) {
+					posAsientos++;
+					regAsientos[posAsientos] = this.asientos[i].registro;
+				}
 			
 		} 
 		
+		numRegAsientos = regAsientos[0];
+		
+		int cont = 0;
+		for (int i = 0; i < regAsientos.length; i++) {
+			
+			if(regAsientos[0] == regAsientos[i]) {
+				cont++;
+				
+			}
+			
+			if (cont == regAsientos.length) {
+				check = true;
+			}
+		}
+		
 		if (check == true) {
-			if (this.asientos[0].registro == this.motor.registro && this.asientos[0].registro == this.registro && this.registro == this.motor.registro) {	
+			if (numRegAsientos == this.motor.registro && numRegAsientos == this.registro && this.registro == this.motor.registro) {	
 				a = "Auto original";
 			}	
 		}
 		
+		System.out.println(regAsientos.length);
+		System.out.println(regAsientos[0]);
+		System.out.println(regAsientos[1]);
 		return a;
 	}
 
